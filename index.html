@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Title -->
+  <title>Test Bazar | Online Test, Mock Test & Practice | Class 10, 11, 12</title>
+
+  <!-- SEO Description -->
+  <meta name="description"
+    content="Test Bazar – Class 10, Class 11, Class 12 ও Competitive Exam-এর Online Test, Mock Test, MCQ Practice, Previous Year Question ও Daily Challenge।">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords"
+    content="Test Bazar, Online Test, Mock Test, Class 10 Online Test, Class 11 Online Test, Class 12 Online Test, Bankura Online Test, Chatna Coaching, Bankura Coaching, WB Board MCQ, Daily Mock Test">
+
+  <meta name="author" content="Test Bazar">
+
+  <!-- Google / Social Preview -->
+  <meta property="og:title"
+    content="Test Bazar | Online Test & Mock Test">
+  <meta property="og:description"
+    content="Class 10, 11, 12 ও Competitive Exam-এর Online Test, MCQ Practice ও Mock Test।">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #063b2a, #0b6b4b);
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-box {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #ffd54a;
+    }
+
+    .menu-btn {
+      background: #ffd54a;
+      color: #123;
+      border: none;
+      padding: 9px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(
+          rgba(4,48,35,0.92),
+          rgba(6,82,57,0.92)
+        );
+      color: white;
+      text-align: center;
+      padding: 60px 20px 55px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: #ffd54a;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 720px;
+      margin: auto;
+      line-height: 1.7;
+      color: #e9fff6;
+    }
+
+    .hero-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-btn {
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 9px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-yellow {
+      background: #ffd54a;
+      color: #17210d;
+    }
+
+    .btn-white {
+      background: white;
+      color: #075b40;
+    }
+
+    /* SEARCH */
+    .search-area {
+      max-width: 850px;
+      margin: -25px auto 35px;
+      padding: 0 15px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .search-box {
+      background: white;
+      padding: 10px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      border: none;
+      background: #0b6b4b;
+      color: white;
+      padding: 0 20px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* MAIN */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 18px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 35px 0 20px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      color: #063b2a;
+    }
+
+    .section-title p {
+      color: #666;
+      margin-top: 7px;
+    }
+
+    /* FEATURE GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 23px 16px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      transition: 0.25s;
+      border: 1px solid #e9edf1;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #075b40;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 14px;
+      background: #075b40;
+      color: white;
+      text-decoration: none;
+      padding: 9px 15px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* CLASS SECTION */
+    .class-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .class-card {
+      color: white;
+      padding: 25px 15px;
+      border-radius: 14px;
+      text-align: center;
+      background: linear-gradient(135deg,#087f5b,#064d39);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    }
+
+    .class-card h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .class-card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .class-card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 9px 15px;
+      border-radius: 7px;
+      background: #ffd54a;
+      color: #18210d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* TODAY TEST */
+    .today {
+      background: linear-gradient(135deg,#fff8d8,#fffdf2);
+      border: 2px solid #ffd54a;
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .today h2 {
+      color: #664d00;
+      margin-bottom: 10px;
+    }
+
+    .today p {
+      color: #665f43;
+      line-height: 1.6;
+    }
+
+    .today a {
+      display: inline-block;
+      margin-top: 18px;
+      background: #075b40;
+      color: white;
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* LOCAL SEO */
+    .local-section {
+      background: white;
+      border-radius: 15px;
+      padding: 28px 22px;
+      margin-top: 35px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    }
+
+    .local-section h2 {
+      color: #063b2a;
+      margin-bottom: 12px;
+    }
+
+    .local-section p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .local-links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .local-links a {
+      text-decoration: none;
+      background: #eef8f3;
+      color: #075b40;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #063b2a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    footer h2 {
+      color: #ffd54a;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #d7eee5;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: white;
+      margin: 0 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .grid,
+      .class-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      .grid,
+      .class-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .card {
+        padding: 18px 10px;
+      }
+
+      .icon {
+        font-size: 32px;
+      }
+
+      .card h3 {
+        font-size: 16px;
+      }
+
+      .card p {
+        font-size: 12px;
+      }
+
+      .card a {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      .hero {
+        padding: 45px 15px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-box">
+    <div class="logo">
+      Test <span>Bazar</span>
+    </div>
+
+    <button class="menu-btn"
+      onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">
+      Menu
+    </button>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <h1>
+    Welcome to <span>Test Bazar</span>
+  </h1>
+
+  <p>
+    Class 10, Class 11, Class 12 এবং Competitive Exam-এর
+    Online Test, Mock Test, MCQ Practice ও Previous Year Question-এর
+    একটি সহজ ও শিক্ষার্থী-বান্ধব প্ল্যাটফর্ম।
+  </p>
+
+  <div class="hero-buttons">
+
+    <a href="today-test.html"
+       class="hero-btn btn-yellow">
+      আজকের টেস্ট
+    </a>
+
+    <a href="class-10.html"
+       class="hero-btn btn-white">
+      Class 10 Test
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- SEARCH -->
+<div class="search-area">
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Test, Class, Subject বা Chapter লিখুন...">
+
+    <button onclick="searchTest()">
+      Search
+    </button>
+
+  </div>
+
+</div>
+
+
+<main class="container">
+
+
+<!-- MAIN FEATURES -->
+<div class="section-title">
+
+  <h2>Test Bazar-এর প্রধান বিভাগ</h2>
+
+  <p>
+    নিজের সময় অনুযায়ী Practice করুন এবং নিজের প্রস্তুতি যাচাই করুন।
+  </p>
+
+</div>
+
+
+<div class="grid">
+
+  <div class="card">
+
+    <div class="icon">📚</div>
+
+    <h3>Practice Zone</h3>
+
+    <p>
+      Subject, Chapter ও Topic অনুযায়ী MCQ Practice Test।
+    </p>
+
+    <a href="practice.html">
+      Practice করুন
+    </a>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">⏱️</div>
+
+    <h3>Daily Mock Test</h3>
+
+    <p>
+      প্রতিদিন নতুন Mock Test দিয়ে নিজের প্রস্তুতি যাচাই করুন।
+    </p>
+
+    <a href="daily-mock-test.html">
+      Mock Test
+    </a>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📖</div>
+
+    <h3>Previous Year</h3>
+
+    <p>
+      Previous Year Question নিয়ে অনুশীলন করুন।
+    </p>
+
+    <a href="previous-year.html">
+      প্রশ্ন দেখুন
+    </a>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">🔥</div>
+
+    <h3>Daily Challenge</h3>
+
+    <p>
+      প্রতিদিনের বিশেষ MCQ Challenge-এ নিজের স্কোর তৈরি করুন।
+    </p>
+
+    <a href="daily-challenge.html">
+      Challenge
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- TODAY TEST -->
+<section class="today">
+
+  <h2>🔥 আজকের Test</h2>
+
+  <p>
+    আজকের নতুন Online Test এখানে পাওয়া যাবে।
+    Test দিন, Result দেখুন এবং নিজের প্রস্তুতি যাচাই করুন।
+  </p>
+
+  <a href="today-test.html">
+    আজকের Test শুরু করুন →
+  </a>
+
+</section>
+
+
+<!-- CLASSES -->
+<div class="section-title">
+
+  <h2>Class অনুযায়ী Test</h2>
+
+  <p>
+    নিজের Class নির্বাচন করে Test শুরু করুন।
+  </p>
+
+</div>
+
+
+<div class="class-grid">
+
+  <div class="class-card">
+
+    <h3>Class 10</h3>
+
+    <p>
+      মাধ্যমিক ও Class 10-এর Subject-wise MCQ Test।
+    </p>
+
+    <a href="class-10.html">
+      View Tests
+    </a>
+
+  </div>
+
+
+  <div class="class-card">
+
+    <h3>Class 11</h3>
+
+    <p>
+      HS Semester 1-এর Subject-wise Practice ও Mock Test।
+    </p>
+
+    <a href="class-11.html">
+      View Tests
+    </a>
+
+  </div>
+
+
+  <div class="class-card">
+
+    <h3>Class 12</h3>
+
+    <p>
+      HS Semester 3-এর Practice ও Mock Test।
+    </p>
+
+    <a href="class-12.html">
+      View Tests
+    </a>
+
+  </div>
+
+
+  <div class="class-card">
+
+    <h3>Competitive</h3>
+
+    <p>
+      বিভিন্ন Competitive Exam-এর MCQ ও Mock Test।
+    </p>
+
+    <a href="competitive.html">
+      View Tests
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- LOCAL SEARCH SECTION -->
+<section class="local-section">
+
+  <h2>📍 Bankura ও Chatna-এর শিক্ষার্থীদের জন্য</h2>
+
+  <p>
+    Test Bazar-এর মাধ্যমে Bankura, Chatna এবং আশেপাশের এলাকার
+    শিক্ষার্থীরা Online Test, MCQ Practice, Mock Test ও
+    Previous Year Question অনুশীলন করতে পারবে।
+  </p>
+
+  <div class="local-links">
+
+    <a href="chatna-coaching.html">
+      Chatna Coaching & Test
+    </a>
+
+    <a href="bankura-coaching.html">
+      Bankura Coaching & Test
+    </a>
+
+    <a href="bankura-online-test.html">
+      Bankura Online Test
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- WHY TEST BAZAR -->
+<div class="section-title">
+
+  <h2>কেন Test Bazar?</h2>
+
+</div>
+
+
+<div class="grid">
+
+  <div class="card">
+
+    <div class="icon">⚡</div>
+
+    <h3>Instant Result</h3>
+
+    <p>
+      Test শেষ করার পর দ্রুত নিজের Result দেখতে পারবেন।
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📊</div>
+
+    <h3>Score Analysis</h3>
+
+    <p>
+      নিজের Performance ও Score সম্পর্কে ধারণা তৈরি করুন।
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📝</div>
+
+    <h3>MCQ Practice</h3>
+
+    <p>
+      নিয়মিত MCQ Practice-এর মাধ্যমে প্রস্তুতি যাচাই করুন।
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">🎯</div>
+
+    <h3>Exam Practice</h3>
+
+    <p>
+      পরীক্ষার আগে বারবার Practice ও Mock Test দিন।
+    </p>
+
+  </div>
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <h2>Test Bazar</h2>
+
+  <p>
+    Online Test • Mock Test • MCQ Practice • Previous Year Question
+  </p>
+
+  <div class="footer-links">
+
+    <a href="index.html">Home</a>
+
+    <a href="today-test.html">Today's Test</a>
+
+    <a href="practice.html">Practice</a>
+
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+  <p>
+    © 2026 Test Bazar. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<script>
+
+function searchTest() {
+
+  const input =
+    document.getElementById("searchInput")
+    .value
+    .trim()
+    .toLowerCase();
+
+  if (!input) {
+
+    alert("দয়া করে Test, Class, Subject অথবা Chapter লিখুন।");
+
+    return;
+  }
+
+  /*
+    এখন আমরা basic search routing করছি।
+    পরে আলাদা search page বানিয়ে
+    সব test automatically search করা যাবে।
+  */
+
+  if (
+    input.includes("আজ") ||
+    input.includes("today") ||
+    input.includes("daily")
+  ) {
+
+    window.location.href = "today-test.html";
+
+  }
+
+  else if (
+    input.includes("class 10") ||
+    input.includes("class10") ||
+    input.includes("মাধ্যমিক")
+  ) {
+
+    window.location.href = "class-10.html";
+
+  }
+
+  else if (
+    input.includes("class 11") ||
+    input.includes("class11")
+  ) {
+
+    window.location.href = "class-11.html";
+
+  }
+
+  else if (
+    input.includes("class 12") ||
+    input.includes("class12")
+  ) {
+
+    window.location.href = "class-12.html";
+
+  }
+
+  else if (
+    input.includes("bankura") ||
+    input.includes("বাঁকুড়া")
+  ) {
+
+    window.location.href = "bankura-coaching.html";
+
+  }
+
+  else if (
+    input.includes("chatna") ||
+    input.includes("ছাতনা")
+  ) {
+
+    window.location.href = "chatna-coaching.html";
+
+  }
+
+  else {
+
+    alert(
+      "এই মুহূর্তে এই Test-এর সরাসরি পেজ পাওয়া যায়নি। পরে আমরা Search System আরও উন্নত করব।"
+    );
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
